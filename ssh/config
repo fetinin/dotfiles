@@ -1,0 +1,25 @@
+host github.com
+ HostName github.com
+ IdentityFile ~/.ssh/id_rsa_github
+ User git
+
+host vscale
+    HostName 78.155.199.15
+    IdentityFile ~/.ssh/vscale
+    User denis
+
+host ocean
+    HostName 142.93.169.163
+    IdentityFile ~/.ssh/ocean
+    User denis
+
+Host stash.lamoda.ru
+  User denis.fetinin
+  Hostname stash.lamoda.ru
+  IdentityFile ~/.ssh/id_rsa
+
+host ocean_deploy
+    HostName 142.93.169.163
+    IdentityFile ~/.ssh/digital_ocean
+    User deploy
+

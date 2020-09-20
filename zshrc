@@ -2,6 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/ncurses/bin:/Users/denis.fetinin/Library/Python/3.7/bin:/Users/denis.fetinin/go/bin:$PATH"
 
+# antigen
+
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/denis.fetinin/.oh-my-zsh"
 

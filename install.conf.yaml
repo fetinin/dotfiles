@@ -12,12 +12,13 @@
         create: true
     # shell
     ~/.zshrc: zshrc
+    ~/.oh-my-zsh: .oh-my-zsh/
 
 - create:
     - ~/.antigen
 
 - install:
-    - '"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-brew -c "${CONFIG}" "${@}"'
+    - [git submodule update --init --recursive, Installing submodules]
 
 - brew:
     - pipx
@@ -27,5 +28,10 @@
     - speedtest
     - golang
     - kubectl
-    - minikube
-    
+    - minikub
+    - bat
+    - exa
+    - fzf
+    - htop
+    - ncdu
+    - noti

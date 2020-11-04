@@ -5,33 +5,35 @@
     ~/.bash_profile: bash_profile
     # git
     ~/.gitconfig: gitconfig
-    ~/.gitignore_global:
     # ssh
     ~/.ssh/config:
         path: ssh/config
         create: true
     # shell
     ~/.zshrc: zshrc
-    ~/.oh-my-zsh: .oh-my-zsh/
 
 - create:
     - ~/.antigen
-
-- install:
-    - [git submodule update --init --recursive, Installing submodules]
 
 - brew:
     - pipx
     - micro
     - antigen
     - lazydocker
-    - speedtest
+    - speedtest-cli
     - golang
     - kubectl
-    - minikub
+    - minikube
     - bat
     - exa
     - fzf
     - htop
     - ncdu
     - noti
+
+- tap:
+    - homebrew/cask-fonts
+
+- cask:
+    - visual-studio-code
+    - font-fira-code

@@ -1,9 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/opt/ncurses/bin:/Users/denis.fetinin/Library/Python/3.7/bin:/Users/denis.fetinin/go/bin:$PATH"
+export PATH="/usr/local/opt/ncurses/bin:/Users/denis.fetinin/go/bin:$PATH"
 
 # antigen
 source /usr/local/share/antigen/antigen.zsh
+
+antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen apply
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/denis.fetinin/.oh-my-zsh"
@@ -69,11 +74,10 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
 git
 git-extras
+gitfast
 pip
 python
 colored-man-pages
-zsh-syntax-highlighting
-zsh-autosuggestions
 django
 docker
 emoji

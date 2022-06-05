@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/ncurses/bin:/Users/denis.fetinin/go/bin:$PATH"
@@ -78,7 +80,6 @@ gitfast
 pip
 python
 colored-man-pages
-django
 docker
 emoji
 extract
@@ -133,3 +134,13 @@ export PATH="/usr/local/opt/helm@2/bin:$PATH"
 
 # Fuzzy fuzz
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/denis.fetinin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/denis.fetinin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/denis.fetinin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/denis.fetinin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"

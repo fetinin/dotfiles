@@ -6,3 +6,11 @@
 [core]
 	excludesfile = /Users/denis.fetinin/.gitignore_global
 	autocrlf = input
+[alias]  
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+[url "ssh://git@stash.lamoda.ru:7999"]
+	insteadOf = https://stash.lamoda.ru/scm
+[pull]
+	ff = only
+[init]
+	defaultBranch = master

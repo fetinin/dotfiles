@@ -1,7 +1,11 @@
+
 host github.com
  HostName github.com
  IdentityFile ~/.ssh/id_rsa_github
  User git
+ IdentitiesOnly yes
+ AddKeysToAgent yes
+ UseKeychain yes
 
 host vscale
     HostName 78.155.199.15
@@ -23,3 +27,7 @@ host ocean_deploy
     IdentityFile ~/.ssh/digital_ocean
     User deploy
 
+host decoroom
+	HostName 207.154.232.159
+	IdentityFile ~/.ssh/decoroom
+	User root

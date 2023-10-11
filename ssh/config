@@ -1,3 +1,5 @@
+Include /Users/denis.fetinin/.colima/ssh_config
+
 
 host github.com
  HostName github.com
@@ -31,3 +33,17 @@ host decoroom
 	HostName 207.154.232.159
 	IdentityFile ~/.ssh/decoroom
 	User root
+
+host supermachina
+  HostName supermachina.ru
+  IdentityFile ~/.ssh/supermachina
+  User denis
+  ServerAliveInterval 15
+
+host supermachinaDeploy
+  HostName supermachina.ru
+  IdentityFile ~/.ssh/supermachina
+  User deployer
+  ServerAliveInterval 15
+  ServerAliveCountMax 3
+

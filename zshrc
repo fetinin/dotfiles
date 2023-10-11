@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/ncurses/bin:/Users/denis.fetinin/go/bin:$PATH"
@@ -142,5 +142,48 @@ if [ -f '/Users/denis.fetinin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then .
 if [ -f '/Users/denis.fetinin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/denis.fetinin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/Users/denis.fetinin/yandex-cloud/path.bash.inc' ]; then source '/Users/denis.fetinin/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/denis.fetinin/yandex-cloud/completion.zsh.inc' ]; then source '/Users/denis.fetinin/yandex-cloud/completion.zsh.inc'; fi
+
+# pnpm
+export PNPM_HOME="/Users/denis.fetinin/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+
+# nvim select plugin
+function nvims() {
+  items=("default" "LazyVim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=nvim/$config nvim $@
+}
+
+export NVIM_APPNAME=nvim/LazyVim
+
 # Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/denis.fetinin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/denis.fetinin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/denis.fetinin/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/denis.fetinin/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

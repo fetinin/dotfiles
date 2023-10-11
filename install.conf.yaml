@@ -19,6 +19,7 @@
     - pipx
     - micro
     - antigen
+    - docker
     - lazydocker
     - speedtest-cli
     - golang
@@ -30,6 +31,10 @@
     - htop
     - ncdu
     - noti
+    - colima
+    - d2
+    - jq
+    - jd
 
 - tap:
     - homebrew/cask-fonts

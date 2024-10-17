@@ -1,19 +1,19 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/opt/ncurses/bin:/Users/denis.fetinin/go/bin:$PATH"
+export PATH="/usr/local/opt/ncurses/bin:/Users/dfetinin/go/bin:$PATH"
+export EDITOR="nvim"
+#export DOCKER_HOST="unix:///Users/dfetinin/.colima/default/docker.sock"
 
 # antigen
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
-antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-
+antigen bundle unixorn/fzf-zsh-plugin@main
 antigen apply
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/denis.fetinin/.oh-my-zsh"
+export ZSH="/Users/dfetinin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -121,9 +121,7 @@ alias please='sudo $(fc -ln -1)'
 source ~/.iterm2_shell_integration.zsh
 
 # added by pipx (https://github.com/pipxproject/pipx)
-export PATH="/Users/denis.fetinin/.local/bin:$PATH"
-
-eval $(thefuck --alias)
+export PATH="/Users/dfetinin/.local/bin:$PATH"
 
 # kubectl autocomplete
 source <(kubectl completion zsh)
@@ -132,24 +130,21 @@ source <(kubectl completion zsh)
 source <(minikube completion zsh)
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
 
+
+# helm autocomplete
+source <(helm completion zsh)
+
 # Fuzzy fuzz
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/denis.fetinin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/denis.fetinin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/denis.fetinin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/denis.fetinin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/opt/python@3.10/bin:$PATH"
-
 # The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/Users/denis.fetinin/yandex-cloud/path.bash.inc' ]; then source '/Users/denis.fetinin/yandex-cloud/path.bash.inc'; fi
+if [ -f '/Users/dfetinin/yandex-cloud/path.bash.inc' ]; then source '/Users/dfetinin/yandex-cloud/path.bash.inc'; fi
 
 # The next line enables shell command completion for yc.
-if [ -f '/Users/denis.fetinin/yandex-cloud/completion.zsh.inc' ]; then source '/Users/denis.fetinin/yandex-cloud/completion.zsh.inc'; fi
+if [ -f '/Users/dfetinin/yandex-cloud/completion.zsh.inc' ]; then source '/Users/dfetinin/yandex-cloud/completion.zsh.inc'; fi
 
 # pnpm
-export PNPM_HOME="/Users/denis.fetinin/Library/pnpm"
+export PNPM_HOME="/Users/dfetinin/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
@@ -174,16 +169,18 @@ export NVIM_APPNAME=nvim/LazyVim
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/denis.fetinin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/dfetinin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/denis.fetinin/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/denis.fetinin/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/dfetinin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/dfetinin/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/denis.fetinin/miniconda3/bin:$PATH"
+        export PATH="/Users/dfetinin/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+[[ -s "/Users/dfetinin/.gvm/scripts/gvm" ]] && source "/Users/dfetinin/.gvm/scripts/gvm"

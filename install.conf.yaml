@@ -1,4 +1,4 @@
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.profile: profile
@@ -7,8 +7,8 @@
     ~/.gitconfig: gitconfig
     # ssh
     ~/.ssh/config:
-        path: ssh/config
-        create: true
+      path: ssh/config
+      create: true
     # shell
     ~/.zshrc: zshrc
 

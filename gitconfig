@@ -1,6 +1,6 @@
 [user]
 	name = Denis Fetinin
-	email = denis.fetinin@lamoda.ru
+	email = denis.fetinin@bki-okb.ru
 [http]
 	sslVerify = true
 [core]
@@ -21,3 +21,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[url "ssh://git@git.ucb.local:7999"]
+	insteadOf = https://git.ucb.local

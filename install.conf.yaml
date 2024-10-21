@@ -17,20 +17,18 @@
 
 - brew:
     - pipx
-    - micro
     - antigen
     - docker
     - lazydocker
     - speedtest-cli
+    - k9s
     - golang
     - kubectl
     - minikube
     - bat
-    - exa
+    - eza
     - fzf
     - htop
-    - ncdu
-    - noti
     - colima
     - d2
     - jq

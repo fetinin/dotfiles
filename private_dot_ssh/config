@@ -1,3 +1,9 @@
+Host weasel
+  User root
+  HostName 45.144.235.225
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/weasel
 
 Host github.com
   AddKeysToAgent yes
@@ -8,14 +14,6 @@ Host git.ucb.local
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/work 
-
-Host weasel
-  User root
-  HostName 45.144.235.225
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/weasel
-
 
 Host *
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

@@ -11,6 +11,7 @@
       create: true
     # shell
     ~/.zshrc: zshrc
+    ~/.zsh: zsh_scripts
 
 - create:
     - ~/.antigen

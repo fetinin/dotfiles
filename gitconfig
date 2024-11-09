@@ -1,8 +1,0 @@
-[user]
-	name = Fetinin Denis Aleksandrovich
-	email = denis.fetinin@lamoda.ru
-[http]
-	sslVerify = true
-[core]
-	excludesfile = /Users/denis.fetinin/.gitignore_global
-	autocrlf = input

@@ -1,0 +1,16 @@
+" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
+
+Plug 'easymotion/vim-easymotion'
+
+""" Map leader to space ---------------------
+let mapleader=" "
+"let mapleader="<Space>"
+" disable the timeout option
+set notimeout
+
+set easymotion
+set which-key
+
+set scrolloff=999
+
+nmap s <Plug>(easymotion-s2)
